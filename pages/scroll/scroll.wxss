@@ -1,0 +1,26 @@
+.container1 {
+  background: purple;
+  color: white;
+  white-space: nowrap;
+}
+
+.item1 {
+  width: 100rpx;
+  height: 100rpx;
+  background: turquoise;
+  margin: 10px;
+  display: inline-block;
+}
+
+.container2 {
+  background: orchid;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.item2 {
+  height: 100rpx;
+  background: blue;
+  color: white;
+  margin: 10px;
+}

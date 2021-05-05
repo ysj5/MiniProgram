@@ -1,0 +1,5 @@
+<!-- 1.view的基本使用 -->
+<view>基本使用</view>
+<!-- hover-class:当用户按下组件时，显示的样式 -->
+<view hover-class="box1">当用户按下组件时，显示的样式</view>
+<!-- hover-stop-propagation:指定是否阻止本节点的祖先节点出现点击态 -->

@@ -1,0 +1,25 @@
+<!-- 1.基本使用 -->
+<!-- 
+  重点：
+   1.image属性可以写成单标签，也可以写成双标签，单标签需要以/>结尾
+	 2.image组件默认有自己的大小 宽320*高240
+	 3.image组件是一个行内块级元素(inline-block)
+ -->
+<!-- 网络图片 -->
+<image src="http://112.74.44.179:8000/user/9/avatar" />
+
+<!-- 本地图片(相对/绝对) -->
+<image src="../../assets/img/static.jpg" />
+<image src="/assets/img/static.jpg" />
+
+<!-- 补充：显示相册中的图片 -->
+<button bindtap="handleChooseAlbum">选择图片</button>
+<image src="{{imgPath}}" />
+
+<view>----------------</view>
+<!-- binload:图片加载完成时触发 -->
+<!-- lazy-load：图片懒加载(图片即将进入屏幕时再加载) -->
+<image wx:for="{{10}}" wx:key="item" src="http://112.74.44.179:8000/user/9/avatar" bindload="handleImgLoad" lazy-load />
+<!-- show-menu-by-longpress:长按图片识别小程序菜单 -->
+
+<!-- mode:图片裁剪、缩放的模式 -->

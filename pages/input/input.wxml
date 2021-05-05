@@ -1,0 +1,20 @@
+<!-- input的基本使用 -->
+<input type="text" />
+
+<!-- value:输入框的初始内容 -->
+<input type="text" value="输入框的初始内容" />
+
+<!--type:决定键盘的类型(点击输入时弹出的键盘，英文字母+其他符号/只允许输入数字/身份证)  -->
+<input type="digit" />
+
+<!-- paaword:暗文形式 -->
+<input password />
+
+<!-- placeholder:输入框为空时占位符 -->
+<input placeholder="请输入内容" />
+
+<!-- confirm-type：设置键盘右下角按钮的文字 -->
+<input confirm-type="go" />
+
+<!-- input绑定事件 -->
+<input bindinput="handleInput" bindfocus="handleFocus" bindblur="handleBlur"/>
