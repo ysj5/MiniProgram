@@ -1,66 +1,22 @@
 // pages/home/home.js
+//拿到全局数据
+const app = getApp(); //getApp()获取App产生的示例对象
+const name = app.globalData.name;
+console.log(name);
 Page({
-
- /**
-  * 页面的初始数据
-  */
- data: {
-
- },
-
- /**
-  * 生命周期函数--监听页面加载
-  */
- onLoad: function (options) {
-
- },
-
- /**
-  * 生命周期函数--监听页面初次渲染完成
-  */
- onReady: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面显示
-  */
- onShow: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面隐藏
-  */
- onHide: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面卸载
-  */
- onUnload: function () {
-
- },
-
- /**
-  * 页面相关事件处理函数--监听用户下拉动作
-  */
- onPullDownRefresh: function () {
-
- },
-
- /**
-  * 页面上拉触底事件的处理函数
-  */
- onReachBottom: function () {
-
- },
-
- /**
-  * 用户点击右上角分享
-  */
- onShareAppMessage: function () {
-
- }
+	data: {
+		name: "Coderwhy",
+		age: 18
+	},
+	onLoad: function() {
+	},
+	getUserProfile() {
+		// 获取用户信息
+		wx.getUserProfile({
+				desc: '用于完善会员资料',
+				success: (res) => {
+						console.log(res.userInfo);
+				}
+		})
+}
 })

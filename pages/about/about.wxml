@@ -1,2 +1,4 @@
 <!--pages/about/about.wxml-->
-<text>关于页面</text>
+<text class="text">about页面</text>
+
+<open-data type="userAvatarUrl"></open-data>

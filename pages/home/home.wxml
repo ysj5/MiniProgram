@@ -1,2 +1,6 @@
 <!--pages/home/home.wxml-->
-<text>首页</text>
+<!-- 1.小程序的数据绑定 -->
+<view>Hello {{name}}</view>
+<view>年龄： {{age}}</view>
+<!-- 获取用户信息 -->
+<button bindtap="getUserProfile"> 获取头像昵称 </button>
