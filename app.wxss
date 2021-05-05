@@ -1,0 +1,4 @@
+.container { /*app.wxss里面的都是全局样式*/
+  color: blueviolet;
+  font-size: 20px;
+}

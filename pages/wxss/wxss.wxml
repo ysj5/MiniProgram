@@ -1,0 +1,7 @@
+<!-- 1.设置样式的三种方式 -->
+<!-- 1.1内联样式 -->
+<view style="color: red; font-size: 20px;">hahha</view>
+<!-- 1.2业内样式 -->
+<view class="box">呵呵呵</view>
+<!-- 1.3全局样式 -->
+<view class="container">嘿嘿嘿</view>
