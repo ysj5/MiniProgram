@@ -1,2 +1,22 @@
-<!--pages/home/home.wxml-->
-<text>首页</text>
+<!-- 1.事件处理的回顾 -->
+<button bindtap="handleTap" size="mini">按钮</button>
+<!-- 小程序1.5以后可在bind后加一个：号 -->
+<button bind:tap="handleTap" size="mini">按钮</button>
+<button catch:tap="handleTap" size="mini">按钮</button>
+<!-- 事件的参数传递 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="item">
+    <view class="item" bindtap="handleItemClick"
+      data-index="{{index}}"
+      data-item="{{item}}">
+    {{item}}</view>
+  </block>
+</view>
+
+<!-- 事件冒泡和事件捕获 -->
+<view class="view1" capture-bind:tap="handleCaptureview1" bindtap="handleBindView1">
+  <view class="view2" capture-bind:tap="handleCaptureview2" bindtap="handleBindView2">
+    <view class="view3" capture-bind:tap="handleCaptureview3" bindtap="handleBindView3">
+    </view>
+  </view>
+</view>

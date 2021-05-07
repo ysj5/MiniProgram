@@ -1,0 +1,15 @@
+<!-- wxs的定义方式 -->
+<wxs module="info">
+  // 里面写js代码，不支持es6
+  var a = 1;
+  var sum = function(num1, num2) {
+    return num1 + num2;
+  }
+  module.exports = { //commonjs的模块化导出写法
+    a: a,
+    sum: sum
+  }
+</wxs>
+
+<view>{{info.a}}</view>
+<view>{{info.sum(20, 30)}}</view>

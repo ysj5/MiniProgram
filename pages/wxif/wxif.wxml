@@ -1,0 +1,32 @@
+<!-- wx:if的使用 -->
+<button size="mini" bindtap="handleSwitch">显示/隐藏</button>
+<view wx:if="{{isShow}}">哈哈哈</view>
+<!-- wx:elif/wx:else -->
+<button size="mini" bindtap="handleIncrement">分数递增{{score}}</button>
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">一般</view>
+<view wx:else>不及格</view>
+<view>---------列表渲染--------</view>
+<!-- 1.wx:for回顾 -->
+<!-- 1.1遍历数组/字符串/数字 -->
+<!-- <view wx:for="{{['abc', 'cba', 'nba']}}">{{index}}：{{item}}</view>
+<view wx:for="coderwhy">{{index}}：{{item}}</view>
+<view wx:for="{{9}}">{{index}}：{{item}}</view> -->
+
+<!-- template模板地使用 -->
+<template name="aa">
+  <button>按钮</button>
+  <view>Hello World</view>
+</template>
+
+<template is="aa" />
+
+<!-- template使用变量 -->
+<template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template>
+
+<template is="contentItem" data="{{btnText: '按钮1', content: '没有内容'}}" />
+<template is="contentItem" data="{{btnText: '按钮2', content: '没有内容2'}}" />
