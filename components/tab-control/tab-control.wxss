@@ -1,0 +1,11 @@
+.tab-control {
+  display: flex;
+  height: 88rpx;
+  line-height: 88rpx;
+  justify-content: space-around;
+}
+.active {
+  color: red;
+  border-bottom: 6rpx solid red;
+  transition: all .3s;
+}

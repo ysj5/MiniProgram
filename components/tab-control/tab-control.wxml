@@ -1,0 +1,14 @@
+<view class="tab-control">
+  <!-- <view class="tab-item">流行</view>
+  <view class="tab-item">新款</view>
+  <view class="tab-item">精选</view> -->
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="tab-item {{currentIndex === index ? 'active' : ''}}" 
+          bindtap="itemClick"
+          data-index="{{index}}"
+          >
+            {{item}}
+        </view>
+  </block>
+  <!-- <view wx:for="{{titles}}" wx:key="index">{{item}}</view> -->
+</view>

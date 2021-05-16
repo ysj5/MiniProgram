@@ -1,2 +1,23 @@
 <!--pages/home/home.wxml-->
-<text>首页</text>
+<!-- <text>首页</text> -->
+<my-cpn />
+<my-prop title="嘿嘿嘿" content="组件的内容"/>
+<my-prop title2="red"/>
+
+<view>当前计数：{{counter}}</view>
+<!-- 监听发射出来的increment事件 -->
+<my-event bind:increment="parentIncrement"/> 
+
+<!-- tab-bar -->
+<!-- 传递一个数组过去 -->
+<tab-control titles="{{['衣服', '裤子', '鞋子']}}" bind:itemclick="parProps"/> 
+
+<!-- 直接选中组件修改数据/调用方法 -->
+<button bindtap="updateDataCpn">修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id"/> <!--给组件绑定一个class或者id，便于拿到组件对象-->
+
+<view>--------</view>
+<!-- 插槽 -->
+<my-slot>
+  <button size="mini">我的插入的按钮</button>
+</my-slot>
