@@ -1,6 +1,10 @@
 {
- "pages": [
-   "pages/home/home",
-   "pages/about/about"
- ]
+  "pages": [
+    "pages/home/home",
+    "pages/about/about"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
 }
