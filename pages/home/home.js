@@ -1,66 +1,31 @@
 // pages/home/home.js
 Page({
-
- /**
-  * 页面的初始数据
-  */
- data: {
-
+ handleShowToast() {
+    wx.showToast({
+      title: '加载中',
+      duration: 3000,
+      icon: "loading" //图标也可以使用本地图片自定义
+    })
  },
-
- /**
-  * 生命周期函数--监听页面加载
-  */
- onLoad: function (options) {
-
+ handleShowModal() {
+   wx.showModal({
+      title: "标题",
+      content: "弹窗内容",
+      success: function(res) {
+        if(res.cancel) {
+          console.log("用户点击了取消");
+        }
+        if(res.confirm) {
+          console.log("用户点击了确定");
+        }
+      }
+   });
  },
-
- /**
-  * 生命周期函数--监听页面初次渲染完成
-  */
- onReady: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面显示
-  */
- onShow: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面隐藏
-  */
- onHide: function () {
-
- },
-
- /**
-  * 生命周期函数--监听页面卸载
-  */
- onUnload: function () {
-
- },
-
- /**
-  * 页面相关事件处理函数--监听用户下拉动作
-  */
- onPullDownRefresh: function () {
-
- },
-
- /**
-  * 页面上拉触底事件的处理函数
-  */
- onReachBottom: function () {
-
- },
-
- /**
-  * 用户点击右上角分享
-  */
- onShareAppMessage: function () {
-
+ onShareAppMessage(options) { //分享
+  return {
+    title: "分享的标题",
+    path: "/pages/about/about", //打开分享的小程序时进入哪个页面
+    // imageUrl: "" //分享的封面使用的图片
+  }
  }
 })

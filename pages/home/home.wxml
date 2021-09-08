@@ -1,2 +1,6 @@
 <!--pages/home/home.wxml-->
 <text>首页</text>
+<button size="mini" bind:tap="handleShowToast">showToast</button>
+<button size="mini" bind:tap="handleShowModal">showToast</button>
+
+<button size="mini" open-type="share">分享按钮</button>
